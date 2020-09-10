@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style/style.css">
+    <title>Sam Greilick</title>
+</head>
+<body>
+<div class="sidebar" id="mySidebar">
+   <a href="./pages/portfolio.html">Portfolio</a>
+   <a href="./pages/contact.html">Contact</a>
+   <a href="./pages/projects.html">Projects</a>
+</div>
+
+<div id="main">
+    <button id="toggle" class="openbtn" data="closed" onclick="toggler()">&#9776; Open Sidebar</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="portfolio"><h2>Projects and apps</h2>
+                <ul>
+                    <li>
+                        <p>Basic Page About Me</p>
+                        <p class="link">GitHub Repo: <a href="https://github.com/srgreiick/prework-about-me">https://github.com/srgreiick/prework-about-me</a></p>
+                        <p class="link">GitHub Page: <a href="https://srgreiick.github.io/prework-about-me/">https://srgreiick.github.io/prework-about-me/</a></p>
+                    </li>
+                    <li>
+                        <p>Password Generation App</p>
+                        <p class="link">GitHub Repo: <a href="https://github.com/srgreiick/03-passwordgenerator">https://github.com/srgreiick/03-passwordgenerator</a></p>
+                        <p class="link">GitHub Page: <a href="https://srgreiick.github.io/03-passwordgenerator/">https://srgreiick.github.io/03-passwordgenerator/</a></p>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="portfolio"> Content Side 2</div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+    
+    
+</body>
+<script>
+function toggler() {
+    let toggle = document.getElementById("toggle")
+    let state = toggle.getAttribute("data")
+    if (state ==="closed") {
+        toggle.setAttribute("data", "open")
+        openNav()
+    }
+    else if (state==="open") {
+        toggle.setAttribute("data", "closed")
+        closeNav()
+    }
+}
+
+
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</html> 

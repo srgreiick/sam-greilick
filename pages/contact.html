@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style/style.css">
+    <title>Sam Greilick</title>
+</head>
+<body>
+<div class="sidebar" id="mySidebar">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">%times;</a>
+   <a href="./portfolio.html">Portfolio</a>
+   <a href="./pages/contact.html">Contact</a>
+   <a href="./pages/projects.html">Projects</a>
+</div>
+
+<div id="main">
+    <button id="toggle" class="openbtn" data="closed" onclick="toggler()">&#9776; Open Sidebar</button>
+    <main class="col-md-8">
+        <h2>Welcome!</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+        </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </main>
+
+  </div>
+    
+    
+</body>
+<script>
+function toggler() {
+    let toggle = document.getElementById("toggle")
+    let state = toggle.getAttribute("data")
+    if (state ==="closed") {
+        toggle.setAttribute("data", "open")
+        openNav()
+    }
+    else if (state==="open") {
+        toggle.setAttribute("data", "closed")
+        closeNav()
+    }
+}
+
+
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</html>   
