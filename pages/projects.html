@@ -23,22 +23,15 @@
     <div id="main">
         <main class="col-md-8">
             <h2>Welcome!</h2>
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-            </form>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <p>Here are some of my personal projects</p>
+
+            </p>
         </main>
 
     </div>
+
+
+
 
 
 </body>
@@ -46,13 +39,16 @@
     function toggler() {
         let toggle = document.getElementById("toggle")
         let state = toggle.getAttribute("data")
+        let unc = '\&#9776'
         if (state === "closed") {
             toggle.setAttribute("data", "open")
             openNav()
+            toggle.textContent = "Close Sidebar"
         }
         else if (state === "open") {
             toggle.setAttribute("data", "closed")
             closeNav()
+            toggle.textContent = "Open Sidebar"
         }
     }
 
@@ -66,8 +62,8 @@
 
     /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
     function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("mySidebar").style.width = "30px";
+        document.getElementById("main").style.marginLeft = "30px";
     }
 
 </script>
