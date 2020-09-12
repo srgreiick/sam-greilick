@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./public/style/style.css">
     <title>Sam Greilick</title>
 </head>
 <body>
+<div class="sidebar" id="mySidebar">
+   <a href="./pages/portfolio.html">Portfolio</a>
+   <a href="./pages/contact.html">Contact</a>
+   <a href="./pages/projects.html">Projects</a>
+   <a href="./index.html"></a>
+</div>
+
+<div id="sideBarBtn">
+    <button id="toggle" class="openbtn" data="closed" onclick="toggler()">Open Sidebar</button>
+</div>
+
+<div id="main">
+    <main class="col-md-8">
+        <h2>Welcome!</h2>
+        <p>My name is Samuel Greilick, I was born in high mountain desert of Colorado. <br >I am an aspiring fullstack web developer, Emergency Medical Technician, wanderer, amature photogapher, and gamer.
+            Thanks for visiting.
+        </p>
+        
+        <img src="assets/me.jpg" alt="sam greilick" width="20%" style="border-style: solid;">
+        <h3>About me</h3>
+        <p>I am an aspiring fullstack web developer and once I am finished with my fullstack training I plan to pursue software development as one of many careers that I have held.<br>
+        I have lived in several states and one other country on another continent, I am driven to constantly learn, grow, and hone myself into the best version of myself I can be.<br>
+    </p>
+    </main>
+</div>
+
+
+
     
     
 </body>
-</html>
+<script>
+function toggler() {
+    let toggle = document.getElementById("toggle")
+    let state = toggle.getAttribute("data")
+    if (state ==="closed") {
+        toggle.setAttribute("data", "open")
+        openNav()
+        toggle.textContent = "Close Sidebar"
+    }
+    else if (state==="open") {
+        toggle.setAttribute("data", "closed")
+        closeNav()
+        toggle.textContent = "Open Sidebar"
+    }
+}
+
+
+
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "30px";
+  document.getElementById("main").style.marginLeft = "30px";
+}
+
+</script>
+</html> 
