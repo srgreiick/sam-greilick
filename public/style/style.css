@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   background-color: #111; /* Black*/
+  opacity:0.8;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
@@ -20,6 +21,9 @@
   color: #818181;
   display: block;
   transition: 0.3s;
+}
+a{
+  color: red;
 }
 
 /* When you mouse over the navigation links, change their color */
